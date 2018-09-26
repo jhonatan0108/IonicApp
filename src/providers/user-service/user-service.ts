@@ -15,7 +15,7 @@ export class UserService {
     //return this.http.get('http://localhost:3000/api/v1/articulos');
   }
   getImage(){
-    var imgg = this.http.get('https://randomuser.me/api/?results=2');
+    var imgg = this.http.get('https://randomuser.me/api/?results=1');
   return imgg
   }
 }
