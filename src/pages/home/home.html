@@ -7,16 +7,29 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    
-    <ion-item *ngFor="let user of users">
-      <ion-avatar item-start *ngFor="let imgs of img">
-        <img  [src]="imgs.picture.medium"> 
-      </ion-avatar>
-      <h2>{{ user.name  }}</h2>
-      <p>{{ user.email  }}</p>
-      <p>Identificacion: {{ user.id  }}</p>
 
-    </ion-item>
+
+  <ion-list>
+    <ion-list>
+      <ion-item *ngFor="let user of users" >
+        <ion-thumbnail item-start *ngFor="let imgs of img">
+          <img [src]="imgs.picture.medium">
+        </ion-thumbnail>
+        <h2>{{ user.name }}</h2>
+        <p>{{ user.email }}</p>
+        <button ion-button clear item-end>View</button>
+      </ion-item>
+    </ion-list>
+
+
+    <!-- <ion-item *ngFor="let user of users">
+      <ion-avatar item-start *ngFor="let imgs of img">
+        <img [src]="imgs.picture.medium">
+      </ion-avatar>
+      <h2>{{ user.name }}</h2>
+      <p>{{ user.email }}</p>
+      <p>Identificacion: {{ user.id }}</p>
+
+    </ion-item> -->
   </ion-list>
 </ion-content>
